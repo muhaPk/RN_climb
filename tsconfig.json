@@ -2,6 +2,12 @@
   "extends": "@react-native/typescript-config/tsconfig.json",
   
   "compilerOptions": {
-    "types": ["nativewind/types"]
+    "types": ["nativewind/types"],
+    "baseUrl": "./src",
+    // "paths": {
+    //   "@entities/*": "entities/*",
+    //   "@pages/*": "pages/*",
+    //   "@shared/*": "shared/*"
+    // }
   }
 }
