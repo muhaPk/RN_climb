@@ -24,7 +24,11 @@ export const CustomInput: FC<FormData> = ({control, errors, placeholder, name, .
                 }}
                 render={({ field: { onChange, onBlur, value } }) => (
 
-                        <View>
+                        <View className='mx-auto w-full max-w-max my-2'>
+
+                            <Text className="block text-sm">
+                                Price
+                            </Text>
 
                             <TextInput
                                 onChangeText={onChange}
@@ -37,7 +41,7 @@ export const CustomInput: FC<FormData> = ({control, errors, placeholder, name, .
                                 // onFocus={}
                                 placeholderTextColor='#aaa'
                                 underlineColorAndroid='transparent'
-                                className='px-2 py-2'
+                                className='px-3 py-1 border-2 border-gray-200 rounded'
                                 {...rest}
                             />
 

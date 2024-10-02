@@ -3,11 +3,6 @@
   
   "compilerOptions": {
     "types": ["nativewind/types"],
-    "baseUrl": "./src",
-    // "paths": {
-    //   "@entities/*": "entities/*",
-    //   "@pages/*": "pages/*",
-    //   "@shared/*": "shared/*"
-    // }
+    "baseUrl": "./src"
   }
 }

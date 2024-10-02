@@ -22,7 +22,7 @@ export const MainLayout: FC<Props> = ({children}: Props) => {
 
             <Header />
 
-            <View className='flex-1 justify-center items-center bg-slate-300'>{children}</View>
+            <View className='flex-1 justify-center items-center bg-white'>{children}</View>
 
             <Footer />
 

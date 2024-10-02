@@ -7,7 +7,7 @@ type Props = {
     onPress: () => void;
 }
 
-export const ButtonCustom = ({title, onPress, ...rest}: Props) => {
+export const CustomButton = ({title, onPress, ...rest}: Props) => {
 
 
     return (
@@ -15,7 +15,7 @@ export const ButtonCustom = ({title, onPress, ...rest}: Props) => {
 
             <Pressable onPress={ onPress}>
 
-                <Text className='text-white px-2 py-2 uppercase'>{title}</Text>
+                <Text className='text-white px-2 py-2 uppercase '>{title}</Text>
 
             </Pressable>
 

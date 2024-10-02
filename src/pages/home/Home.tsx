@@ -1,25 +1,20 @@
-import React, {FC} from 'react';
+import React, {FC, useRef} from 'react';
 import { Text, View } from 'react-native'
-import { CustomInput } from 'shared/ui/input/input'
-import { useForm } from "react-hook-form";
+import Svg, { Line, Polyline } from 'react-native-svg';
+import { GuideSlider } from 'entities/guideSlider/ui/guideSlider';
 
 export const Home: FC = () => {
-  
-    const { control, handleSubmit, formState: { errors } } = useForm({
-        defaultValues: {
-            email: '',
-            password: ''
-        }
-    });
-
 
     return (
 
     <View>
-        <Text>Home!</Text>
-        <Text>This is a subtitle</Text>
 
-        <CustomInput control={control} errors={errors} placeholder="Е-маил" name="email" />
+
+
+        {/* <GuideSlider /> */}
+        <GuideSlider />
+
+        
 
     </View>
 

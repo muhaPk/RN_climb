@@ -3,7 +3,7 @@ import {Button, View, Text} from 'react-native'
 import {useNavigation, NavigationProp} from "@react-navigation/native";
 import { RootStackParamList } from './rootStackParamList'
 
-import { ButtonCustom } from '../button/button';
+import { CustomButton } from '../button/button';
 
 
 export const Header = () => {
@@ -16,8 +16,8 @@ export const Header = () => {
         <View className="flex-none flex-row justify-between p-4 bg-gray-800">
 
 
-          <ButtonCustom title="Home" onPress={() => navigation.navigate('Home') } />
-          <ButtonCustom title="Settings" onPress={() => navigation.navigate('Settings') } />
+          <CustomButton title="Home" onPress={() => navigation.navigate('Home') } />
+          <CustomButton title="Settings" onPress={() => navigation.navigate('Settings') } />
 
         </View>
     );
