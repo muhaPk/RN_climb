@@ -2,7 +2,12 @@ import React, {FC, ReactNode, useRef} from 'react';
 import {View, Text, Button, DrawerLayoutAndroid} from 'react-native'
 import { Footer } from './footer';
 import { Header } from './header';
-import { BurgerMenu } from '../burger-menu/burger-menu';
+import { CustomButton } from '../button/button';
+import {useNavigation, NavigationProp} from "@react-navigation/native";
+import { RootStackParamList } from './rootStackParamList'
+import Icon from 'react-native-vector-icons/EvilIcons'
+import FeatherIcon from 'react-native-vector-icons/Feather'
+
 // import { useSelector } from "react-redux";
 // import Meta from '../seo';
 
@@ -14,15 +19,26 @@ export const MainLayout: FC<Props> = ({children}: Props) => {
 
   // const isAuth = useSelector((state: any) => state.users.isAuth)
 
+  const navigation = useNavigation<NavigationProp<RootStackParamList>>();
+
   const drawer = useRef<DrawerLayoutAndroid>(null);
 
   const navigationView = () => (
     <View className='fixed h-screen z-50 bg-slate-100'>
-      <Text>I'm in the Drawer!</Text>
-      <Button
-        title="Close drawer"
-        onPress={() => drawer.current?.closeDrawer()}
-      />
+
+          <FeatherIcon.Button 
+            name="x" 
+            size={30} 
+            color="black" 
+            backgroundColor="transparent" 
+            underlayColor="transparent" 
+            onPress={() => drawer.current?.closeDrawer()} 
+          />
+
+      <CustomButton title="Set" onPress={() => navigation.navigate('Settings') } />
+
+
+
     </View>
   );
 

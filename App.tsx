@@ -11,8 +11,6 @@ import { Home } from 'pages/home/Home';
 import { Settings } from 'pages/settings/Settings';
 import { Registration } from 'pages/registration/Registration'
 
-import { createDrawerNavigator } from '@react-navigation/drawer';
-
 // import { Registration } from './src/pages/auth/Registration';
 // import {Auth} from './src/pages/auth/Auth';
 import { store } from './src/app/store/index';

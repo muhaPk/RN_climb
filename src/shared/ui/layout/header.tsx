@@ -2,8 +2,7 @@ import React, {FC, useRef} from 'react';
 import {Button, View, Text, Image, DrawerLayoutAndroid} from 'react-native'
 import {useNavigation, NavigationProp} from "@react-navigation/native";
 import { RootStackParamList } from './rootStackParamList'
-import { BurgerMenu } from '../burger-menu/burger-menu';
-import { CustomButton } from '../button/button';
+import Icon from 'react-native-vector-icons/EvilIcons'
 
 
 export const Header: FC = ({drawer}: any) => {
@@ -18,17 +17,21 @@ export const Header: FC = ({drawer}: any) => {
 
           <Image className='h-9 w-20' source={require('../../../shared/assets/logo.png')} />
 
-          <Button
-                    title="Open drawer"
-                    onPress={() => drawer.current?.openDrawer()}
-                />
+          <Icon.Button 
+            name="navicon" 
+            size={30} 
+            color="white" 
+            backgroundColor="transparent" 
+            underlayColor="transparent" 
+            onPress={() => drawer.current?.openDrawer()} 
+          />
+
 
 
           {/* <CustomButton title="Home" onPress={() => navigation.navigate('Home') } />
           <CustomButton title="Reg" onPress={() => navigation.navigate('Registration') } />
           <CustomButton title="Set" onPress={() => navigation.navigate('Settings') } /> */}
 
-          {/* <BurgerMenu /> */}
 
         </View>
     );
