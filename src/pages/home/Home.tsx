@@ -11,8 +11,7 @@ export const Home: FC = () => {
 
 
 
-        {/* <GuideSlider /> */}
-        <GuideSlider />
+        <Text>hello</Text>
 
         
 

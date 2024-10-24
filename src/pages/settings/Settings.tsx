@@ -22,13 +22,14 @@ export const Settings: FC = () => {
     return (
 
         <View className='w-full items-center'>
-        <Text>Settings</Text>
+            
+            <Text>Settings</Text>
 
-        <CustomInput control={control} errors={errors} placeholder="Е-маил" name="email" />
+            <CustomInput control={control} errors={errors} placeholder="Е-маил" name="email" />
 
-        <CustomButton title='button' onPress={handleSubmit(onSubmit)} />
+            <CustomButton title='button' onPress={handleSubmit(onSubmit)} />
 
-    </View>
+        </View>
 
     );
 }

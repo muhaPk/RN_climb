@@ -6,11 +6,12 @@ import {Controller} from "react-hook-form";
 type FormData = {
     control: any;
     errors: any;
-    placeholder: string;
     name: string;
+    placeholder: string;
+    title?: string;
 }
 
-export const CustomInput: FC<FormData> = ({control, errors, placeholder, name, ...rest}: FormData) => {
+export const CustomInput: FC<FormData> = ({control, errors, placeholder, title, name, ...rest}: FormData) => {
 
 
     return (
@@ -26,9 +27,13 @@ export const CustomInput: FC<FormData> = ({control, errors, placeholder, name, .
 
                         <View className='mx-auto w-full max-w-max my-2'>
 
-                            <Text className="block text-sm">
-                                Price
-                            </Text>
+                            {
+                                title && 
+                                <Text className="block text-xs">
+                                    {title}
+                                </Text>
+                            }
+                            
 
                             <TextInput
                                 onChangeText={onChange}
