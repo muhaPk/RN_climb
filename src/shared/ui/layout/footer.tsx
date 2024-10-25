@@ -7,9 +7,9 @@ export const Footer = () => {
     const navigation = useNavigation();
 
     return (
-        <View className="flex-none flex-row justify-between p-4 bg-gray-800">
+        <View className="flex-none flex-row justify-between p-4">
 
-          <Text className="text-white">footer text</Text>
+          <Text className="text-gray-500">onlinecredite, 2024</Text>
 
         </View>
     );

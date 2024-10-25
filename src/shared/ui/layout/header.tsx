@@ -1,26 +1,26 @@
-import React, {FC, useRef} from 'react';
-import {Button, View, Text, Image, DrawerLayoutAndroid} from 'react-native'
-import {useNavigation, NavigationProp} from "@react-navigation/native";
-import { RootStackParamList } from './rootStackParamList'
+import React, {FC} from 'react';
+import {Button, View, Text, Image} from 'react-native'
 import Icon from 'react-native-vector-icons/EvilIcons'
-
+import { PressableWrapper } from '../PressableWrapper/PressableWrapper';
 
 export const Header: FC = ({drawer}: any) => {
 
     // const navigation = useNavigation();
 
 
-    const navigation = useNavigation<NavigationProp<RootStackParamList>>();
-
     return (
-        <View className="flex-none flex-row justify-between p-4 bg-gray-800">
+        <View className="flex-none flex-row justify-between p-4">
 
+
+        <PressableWrapper page='Home'>
           <Image className='h-9 w-20' source={require('../../../shared/assets/logo.png')} />
+        </PressableWrapper>
+
 
           <Icon.Button 
             name="navicon" 
             size={30} 
-            color="white" 
+            color="black" 
             backgroundColor="transparent" 
             underlayColor="transparent" 
             onPress={() => drawer.current?.openDrawer()} 

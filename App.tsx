@@ -10,6 +10,7 @@ import { MainLayout } from './src/shared/ui/layout/mainLayout';
 import { Home } from 'pages/home/Home';
 import { Settings } from 'pages/settings/Settings';
 import { Registration } from 'pages/registration/Registration'
+import { Contacts } from 'pages/contacts/Contacts'
 
 // import { Registration } from './src/pages/auth/Registration';
 // import {Auth} from './src/pages/auth/Auth';
@@ -49,6 +50,10 @@ const Navigator = () => {
 
           <Stack.Screen name="Settings">
             {() => (<MainLayout><Settings /></MainLayout>)}
+          </Stack.Screen>
+
+          <Stack.Screen name="Contacts">
+            {() => (<MainLayout><Contacts /></MainLayout>)}
           </Stack.Screen>
 
         </Stack.Navigator>

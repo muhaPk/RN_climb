@@ -19,12 +19,10 @@ export const MainLayout: FC<Props> = ({children}: Props) => {
 
   // const isAuth = useSelector((state: any) => state.users.isAuth)
 
-  const navigation = useNavigation<NavigationProp<RootStackParamList>>();
-
   const drawer = useRef<DrawerLayoutAndroid>(null);
 
   const navigationView = () => (
-    <View className='fixed h-screen z-50 bg-slate-100'>
+    <View className='fixed h-screen z-50 bg-white p-2'>
 
           <FeatherIcon.Button 
             name="x" 
@@ -35,9 +33,9 @@ export const MainLayout: FC<Props> = ({children}: Props) => {
             onPress={() => drawer.current?.closeDrawer()} 
           />
 
-      <CustomButton title="Set" onPress={() => navigation.navigate('Settings') } />
 
 
+        <CustomButton type="link" title="Контакты" onPress={'Contacts'} className='my-1' />
 
     </View>
   );
@@ -56,7 +54,7 @@ export const MainLayout: FC<Props> = ({children}: Props) => {
 
                 <Header drawer={drawer} />
 
-                <View className='flex-1 justify-center items-center bg-white'>{children}</View>
+                <View className='flex-1 justify-center items-center px-2 bg-white'>{children}</View>
 
                 <Footer />
 

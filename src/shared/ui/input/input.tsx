@@ -9,9 +9,10 @@ type FormData = {
     name: string;
     placeholder: string;
     title?: string;
+    type?: string;
 }
 
-export const CustomInput: FC<FormData> = ({control, errors, placeholder, title, name, ...rest}: FormData) => {
+export const CustomInput: FC<FormData> = ({control, errors, placeholder, title, name, type = 'input', ...rest}: FormData) => {
 
 
     return (
@@ -39,10 +40,15 @@ export const CustomInput: FC<FormData> = ({control, errors, placeholder, title, 
                                 onChangeText={onChange}
                                 value={value}
                                 placeholder={placeholder}
+                                
+                                multiline={type === 'textarea'}
+                                numberOfLines={type === 'textarea' ? 4 : 1}
 
                                 onBlur={() => {
                                     onBlur();
                                 } }
+
+                                style={type === 'textarea' && { textAlignVertical: 'top' }}
                                 // onFocus={}
                                 placeholderTextColor='#aaa'
                                 underlineColorAndroid='transparent'

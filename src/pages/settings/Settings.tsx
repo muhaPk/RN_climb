@@ -26,7 +26,6 @@ export const Settings: FC = () => {
             <Text>Settings</Text>
 
             <CustomInput control={control} errors={errors} placeholder="Е-маил" name="email" />
-
             <CustomButton title='button' onPress={handleSubmit(onSubmit)} />
 
         </View>

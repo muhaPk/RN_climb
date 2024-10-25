@@ -1,21 +1,33 @@
 import React from 'react';
 import {View, Text, Pressable} from 'react-native'
-
+import {useNavigation, NavigationProp} from "@react-navigation/native";
+import { RootStackParamList } from '../layout/rootStackParamList'
 
 type Props = {
+    type?: 'link' | 'button';
     title: string;
-    onPress: () => void;
+    onPress: any;
+    className?: string;
 }
 
-export const CustomButton = ({title, onPress, ...rest}: Props) => {
+export const CustomButton = ({type = 'link', title, onPress, ...rest}: Props) => {
 
+    const navigation = useNavigation<NavigationProp<RootStackParamList>>();
+
+
+    const classTypes = {
+        buttonCover: 'bg-blue-500 rounded px-4 py-2 items-center',
+        buttonText: 'text-white',
+        linkCover: '',
+        linkText: 'text-blue-600 font-bold'
+    }
 
     return (
-        <View className='bg-black rounded' {...rest}>
+        <View className={classTypes[`${type}Cover`]} {...rest}>
 
-            <Pressable onPress={ onPress}>
+            <Pressable onPress={() => navigation.navigate(onPress)} >
 
-                <Text className='text-white px-2 py-2 uppercase '>{title}</Text>
+                <Text className={classTypes[`${type}Text`]}>{title}</Text>
 
             </Pressable>
 
