@@ -54,7 +54,7 @@ export const MainLayout: FC<Props> = ({children}: Props) => {
 
                 <Header drawer={drawer} />
 
-                <View className='flex-1 justify-center items-center px-2 bg-white'>{children}</View>
+                <View className='flex-1 p-2 bg-white'>{children}</View>
 
                 <Footer />
 

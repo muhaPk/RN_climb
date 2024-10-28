@@ -1,7 +1,5 @@
 import React from 'react';
 import {View, Text, Pressable} from 'react-native'
-import {useNavigation, NavigationProp} from "@react-navigation/native";
-import { RootStackParamList } from '../layout/rootStackParamList'
 
 type Props = {
     type?: 'link' | 'button';
@@ -23,7 +21,7 @@ export const CustomButton = ({type = 'link', title, onPress, ...rest}: Props) =>
     return (
         <View className={classTypes[`${type}Cover`]} {...rest}>
 
-            <Pressable onPress={() => onPress} >
+            <Pressable onPress={() => onPress}>
 
                 <Text className={classTypes[`${type}Text`]}>{title}</Text>
 
