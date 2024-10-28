@@ -12,8 +12,6 @@ type Props = {
 
 export const CustomButton = ({type = 'link', title, onPress, ...rest}: Props) => {
 
-    const navigation = useNavigation<NavigationProp<RootStackParamList>>();
-
 
     const classTypes = {
         buttonCover: 'bg-blue-500 rounded px-4 py-2 items-center',
@@ -25,7 +23,7 @@ export const CustomButton = ({type = 'link', title, onPress, ...rest}: Props) =>
     return (
         <View className={classTypes[`${type}Cover`]} {...rest}>
 
-            <Pressable onPress={() => navigation.navigate(onPress)} >
+            <Pressable onPress={() => onPress} >
 
                 <Text className={classTypes[`${type}Text`]}>{title}</Text>
 

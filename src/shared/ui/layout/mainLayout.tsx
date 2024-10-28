@@ -2,7 +2,7 @@ import React, {FC, ReactNode, useRef} from 'react';
 import {View, Text, Button, DrawerLayoutAndroid} from 'react-native'
 import { Footer } from './footer';
 import { Header } from './header';
-import { CustomButton } from '../button/button';
+import { CustomButton } from '../CustomButton/CustomButton';
 import {useNavigation, NavigationProp} from "@react-navigation/native";
 import { RootStackParamList } from './rootStackParamList'
 import Icon from 'react-native-vector-icons/EvilIcons'

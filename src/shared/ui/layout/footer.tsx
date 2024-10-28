@@ -7,7 +7,7 @@ export const Footer = () => {
     const navigation = useNavigation();
 
     return (
-        <View className="flex-none flex-row justify-between p-4">
+        <View className="flex-none flex-row justify-center p-4">
 
           <Text className="text-gray-500">onlinecredite, 2024</Text>
 

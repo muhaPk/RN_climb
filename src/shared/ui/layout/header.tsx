@@ -1,9 +1,13 @@
-import React, {FC} from 'react';
-import {Button, View, Text, Image} from 'react-native'
+import React, {FC, RefObject} from 'react';
+import {Button, View, Text, Image, DrawerLayoutAndroid} from 'react-native'
 import Icon from 'react-native-vector-icons/EvilIcons'
-import { PressableWrapper } from '../PressableWrapper/PressableWrapper';
+import { PressableNavigation } from '../PressableNavigation/PressableNavigation';
 
-export const Header: FC = ({drawer}: any) => {
+type HeaderProps = {
+  drawer: RefObject<DrawerLayoutAndroid>;
+};
+
+export const Header: FC<HeaderProps> = ({drawer}) => {
 
     // const navigation = useNavigation();
 
@@ -12,21 +16,22 @@ export const Header: FC = ({drawer}: any) => {
         <View className="flex-none flex-row justify-between p-4">
 
 
-        <PressableWrapper page='Home'>
+        <PressableNavigation page='Home'>
           <Image className='h-9 w-20' source={require('../../../shared/assets/logo.png')} />
-        </PressableWrapper>
+        </PressableNavigation>
 
 
-          <Icon.Button 
+          {/* <Icon.Button 
             name="navicon" 
             size={30} 
             color="black" 
             backgroundColor="transparent" 
             underlayColor="transparent" 
             onPress={() => drawer.current?.openDrawer()} 
-          />
+          /> */}
 
 
+          <PressableNavigation page='Contacts'><Text>Contacts</Text></PressableNavigation>
 
           {/* <CustomButton title="Home" onPress={() => navigation.navigate('Home') } />
           <CustomButton title="Reg" onPress={() => navigation.navigate('Registration') } />

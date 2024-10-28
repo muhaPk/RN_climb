@@ -1,28 +1,33 @@
-import React, {FC, useRef} from 'react';
-import { Text, View } from 'react-native'
+import React, {FC} from 'react';
+import { Text, View, Button, Linking } from 'react-native'
 import { useForm } from "react-hook-form";
 import { CustomInput } from 'shared/ui/input/input'
-import { CustomButton } from 'shared/ui/button/button'
+import email from 'react-native-email';
+import { EMAIL } from 'shared/config/consts';
 
 export const Contacts: FC = () => {
 
 
     const { control, handleSubmit, formState: { errors } } = useForm({
         defaultValues: {
-            email: '',
-            password: ''
+            name: '',
+            phone: '',
+            message: '',
         }
     });
 
     const onSubmit = (data: any) => {
-        console.log('submit')
+
+        email([EMAIL], {
+            subject: 'Test',
+            body: data.message,
+          }).catch(console.error);
     };
 
 
     return (
 
         <View className='w-full px-2'>
-
 
             <View className='items-center'>
                 <Text>O.C.N."ONLINE CREDIT" SRL</Text>
@@ -34,12 +39,12 @@ export const Contacts: FC = () => {
 
             <Text className='mt-4 center'>Написать нам</Text>
 
-            <CustomInput control={control} errors={errors} placeholder="Имя" name="name" />
-            <CustomInput control={control} errors={errors} placeholder="Телефон" name="phone" />
-            <CustomInput control={control} errors={errors} type='textarea' placeholder="Сообщение" name="message" />
 
-            <CustomButton type='button' title='Отправить' onPress={handleSubmit(onSubmit)} />
+                <CustomInput control={control} errors={errors} placeholder="Имя" name="name" />
+                <CustomInput control={control} errors={errors} placeholder="Телефон" name="phone" />
+                <CustomInput control={control} errors={errors} type='textarea' placeholder="Сообщение" name="message" />
 
+                <Button title="Отирпвить" onPress={handleSubmit(onSubmit)} />
 
         </View>
 

@@ -1,7 +1,7 @@
 import React, {FC, useRef} from 'react';
 import { Text, View } from 'react-native'
 import { CustomInput } from 'shared/ui/input/input'
-import { CustomButton } from 'shared/ui/button/button'
+import { CustomButton } from 'shared/ui/CustomButton/CustomButton'
 import { useForm } from "react-hook-form";
 
 export const Registration: FC = () => {
