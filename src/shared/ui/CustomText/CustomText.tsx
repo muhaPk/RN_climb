@@ -11,9 +11,9 @@ export const CustomText = ({ children, type = 'h1', ...rest }: Props) => {
 
 
     const classTypes = {
-        h1: 'text-blue-400 font-bold text-xl',
-        h2: 'text-blue-400 font-bold text-lg',
-        h3: 'text-blue-400 font-bold text-base',
+        h1: 'text-[#29aae2] font-bold text-xl',
+        h2: 'text-[#29aae2] font-bold text-lg',
+        h3: 'text-[#333] font-bold text-base',
     }
 
     return (

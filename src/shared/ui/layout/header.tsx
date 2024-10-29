@@ -20,18 +20,18 @@ export const Header: FC<HeaderProps> = ({drawer}) => {
           <Image className='h-9 w-20' source={require('../../../shared/assets/logo.png')} />
         </PressableNavigation>
 
+        <PressableNavigation page='Contacts'><Text>Contacts</Text></PressableNavigation>
 
-          {/* <Icon.Button 
-            name="navicon" 
-            size={30} 
-            color="black" 
-            backgroundColor="transparent" 
-            underlayColor="transparent" 
-            onPress={() => drawer.current?.openDrawer()} 
-          /> */}
+        {/* <Icon.Button 
+          name="navicon" 
+          size={30} 
+          color="black" 
+          backgroundColor="transparent" 
+          underlayColor="transparent" 
+          onPress={() => drawer.current?.openDrawer()} 
+        /> */}
 
 
-          <PressableNavigation page='Contacts'><Text>Contacts</Text></PressableNavigation>
 
           {/* <CustomButton title="Home" onPress={() => navigation.navigate('Home') } />
           <CustomButton title="Reg" onPress={() => navigation.navigate('Registration') } />

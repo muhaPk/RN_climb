@@ -1,12 +1,9 @@
 import React, {FC, ReactNode, useRef} from 'react';
-import {View, Text, Button, DrawerLayoutAndroid} from 'react-native'
+import {View, ScrollView, Text, Button, DrawerLayoutAndroid} from 'react-native'
 import { Footer } from './footer';
 import { Header } from './header';
-import { CustomButton } from '../CustomButton/CustomButton';
-import {useNavigation, NavigationProp} from "@react-navigation/native";
-import { RootStackParamList } from './rootStackParamList'
-import Icon from 'react-native-vector-icons/EvilIcons'
 import FeatherIcon from 'react-native-vector-icons/Feather'
+import { PressableNavigation } from '../PressableNavigation/PressableNavigation';
 
 // import { useSelector } from "react-redux";
 // import Meta from '../seo';
@@ -22,7 +19,8 @@ export const MainLayout: FC<Props> = ({children}: Props) => {
   const drawer = useRef<DrawerLayoutAndroid>(null);
 
   const navigationView = () => (
-    <View className='fixed h-screen z-50 bg-white p-2'>
+    // <View className='fixed h-screen z-50 bg-white p-2'>
+    <View className='flex-1 p-2'>
 
           <FeatherIcon.Button 
             name="x" 
@@ -34,8 +32,9 @@ export const MainLayout: FC<Props> = ({children}: Props) => {
           />
 
 
-
-        <CustomButton type="link" title="Контакты" onPress={'Contacts'} className='my-1' />
+        <PressableNavigation page='Home'><Text>Главная</Text></PressableNavigation>
+        <PressableNavigation page='Contacts'><Text>Контакты</Text></PressableNavigation>
+        <PressableNavigation page='Registration'><Text>Регистрация</Text></PressableNavigation>
 
     </View>
   );
@@ -54,7 +53,7 @@ export const MainLayout: FC<Props> = ({children}: Props) => {
 
                 <Header drawer={drawer} />
 
-                <View className='flex-1 p-2 bg-white'>{children}</View>
+                <ScrollView className='flex-1 p-2 bg-white'>{children}</ScrollView>
 
                 <Footer />
 
