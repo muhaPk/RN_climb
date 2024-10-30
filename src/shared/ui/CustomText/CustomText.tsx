@@ -22,3 +22,35 @@ export const CustomText = ({ children, type = 'h1', ...rest }: Props) => {
 
     )
 }
+
+export const H1 = ({ children, ...rest }: Props) => {
+    return (
+
+        <Text className='text-[#29aae2] font-bold text-xl' {...rest}>{children}</Text>
+
+    )
+}
+
+export const H2 = ({ children, ...rest }: Props) => {
+    return (
+
+        <Text className='text-[#29aae2] font-bold text-lg' {...rest}>{children}</Text>
+
+    )
+}
+
+export const H3 = ({ children, ...rest }: Props) => {
+    return (
+
+        <Text className='text-[#333] font-bold text-base' {...rest}>{children}</Text>
+
+    )
+}
+
+export const T = ({ children, ...rest }: Props) => {
+    return (
+      <Text className={`text-gray-600 text-base`} {...rest}>
+        {children}
+      </Text>
+    );
+  };
