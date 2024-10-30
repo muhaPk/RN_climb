@@ -3,7 +3,10 @@ import { StatusBar, View } from 'react-native';
 import { Provider, useSelector } from 'react-redux';
 
 import {NavigationContainer} from '@react-navigation/native';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
+
+import { createDrawerNavigator } from '@react-navigation/drawer';
+
+
 
 import { MainLayout } from './src/shared/ui/layout/mainLayout';
 
@@ -16,16 +19,17 @@ import { Contacts } from 'pages/contacts/Contacts'
 // import {Auth} from './src/pages/auth/Auth';
 import { store } from './src/app/store/index';
 
-const Stack = createNativeStackNavigator();
+
+
+const Drawer = createDrawerNavigator();
+
 
 export default function App() {
 
   return (
     <Provider store={store}>
-
           <Navigator />
           <StatusBar backgroundColor='#354052' />
-
     </Provider>
   );
 }
@@ -33,30 +37,34 @@ export default function App() {
 const Navigator = () => {
 
   // const isAuth = useSelector(state => state.users.isAuth)
-
-
   return (
     <NavigationContainer>
 
-        <Stack.Navigator initialRouteName="Home" screenOptions={{headerShown: false}}>
 
-          <Stack.Screen name="Home">
+
+        <Drawer.Navigator initialRouteName="Home" screenOptions={{headerShown: false}}>
+
+          {/* <Drawer.Screen name="Home" component={Home} /> */}
+
+          <Drawer.Screen name="Home">
             {() => (<MainLayout><Home /></MainLayout>)}
-          </Stack.Screen>
+          </Drawer.Screen>
 
-          <Stack.Screen name="Registration">
+          <Drawer.Screen name="Registration">
             {() => (<MainLayout><Registration /></MainLayout>)}
-          </Stack.Screen>
+          </Drawer.Screen>
 
-          <Stack.Screen name="Settings">
+          <Drawer.Screen name="Settings">
             {() => (<MainLayout><Settings /></MainLayout>)}
-          </Stack.Screen>
+          </Drawer.Screen>
 
-          <Stack.Screen name="Contacts">
+          <Drawer.Screen name="Contacts">
             {() => (<MainLayout><Contacts /></MainLayout>)}
-          </Stack.Screen>
+          </Drawer.Screen>
 
-        </Stack.Navigator>
+        </Drawer.Navigator>
+
+
 
     </NavigationContainer>
   )

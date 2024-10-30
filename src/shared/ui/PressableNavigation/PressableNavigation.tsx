@@ -13,7 +13,7 @@ export const PressableNavigation: FC<Props> = ({children, page}) => {
     const navigation = useNavigation<NavigationProp<RootStackParamList>>();
 
     return (
-        <Pressable onPress={() => page && navigation.navigate(page)} >
+        <Pressable onPress={() => navigation.navigate(page)} >
             {children}
         </Pressable>
     )
