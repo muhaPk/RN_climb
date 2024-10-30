@@ -5,17 +5,35 @@ import { CustomText, H1, H2, H3, T } from 'shared/ui/CustomText/CustomText';
 import Icon from 'react-native-vector-icons/Entypo'
 import {Ul, Li} from 'shared/ui/CustomTags/CustomTags'
 
+import Vector from 'shared/assets/vector.svg'
+
 export const Home: FC = () => {
 
     return (
 
     <View className='pb-8'>
     
-        <View className='w-full text-[#ccc]'>
+        <View className='w-full'>
 
-            <H1 className='text-center my-4'>Кредит за 10 минут!</H1>
 
-            <T className='text-center mb-4'>Заполните заявку и уже через 10 минут вы сможете получить деньги.</T>
+            <View className='w-8/12 mx-auto'>
+                        <View className='flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-[#29aae2]'>
+
+                            <Image className='w-full h-[200px] align-middle rounded-t-lg' source={require('../../shared/assets/card.jpg')} />
+                            
+                            <View className='-mt-[94px]'>
+                                <Vector />
+                            </View>
+                            <View className='p-6 mb-4'>
+                                <H3 className='text-white mb-4'>Кредит за 10 минут!</H3>
+                                <T className='text-white'>Заполните заявку и уже через 10 минут вы сможете получить деньги.</T>
+                            </View>
+
+                        </View>
+            </View>
+
+
+
             <T className='text-center'>Заявки на получение кредита можно подать:</T>
             <Ul>
                 <Li>через мини-терминалы Runpay, расположенные по одному из выбранных адресов</Li>
@@ -23,16 +41,6 @@ export const Home: FC = () => {
                 <Li>через терминалы Runpay, расположенные в нескольких магазинах, таких как: Linella, №1, Starnet, Kaufland и др.</Li>
             </Ul>
 
-
-
-            <View className='relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-pink-600'>
-
-                <Image className='h-9 w-20' source={require('../../shared/assets/logo.png')} />
-                <View className='relative p-8 mb-4'>
-                    
-                </View>
-
-            </View>
 
 
             <CustomText type='h1' className='text-center mb-4 mt-6'>Калькулятор кредита</CustomText>
