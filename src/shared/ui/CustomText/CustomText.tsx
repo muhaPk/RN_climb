@@ -49,8 +49,26 @@ export const H3 = ({ children, ...rest }: Props) => {
 
 export const T = ({ children, ...rest }: Props) => {
     return (
-      <Text className={`text-gray-600 text-base`} {...rest}>
+      <Text className={'text-gray-600 text-base pr-2'} {...rest}>
         {children}
       </Text>
     );
   };
+
+export const T2 = ({ children, ...rest }: Props) => {
+    return (
+      <Text className={'text-gray-600 text-sm pr-2'} {...rest}>
+        {children}
+      </Text>
+    );
+  };
+
+  export const Underline = ({...rest}) => {
+
+        return (
+            
+            <View className='w-2/12 mx-auto border-b-2 mb-8 mt-6 border-b-[#29aae2]' {...rest}></View>
+
+        )
+
+  }

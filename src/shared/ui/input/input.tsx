@@ -10,6 +10,7 @@ type FormData = {
     placeholder: string;
     title?: string;
     type?: string;
+    className?: string;
 }
 
 export const CustomInput: FC<FormData> = ({control, errors, placeholder, title, name, type = 'input', ...rest}: FormData) => {

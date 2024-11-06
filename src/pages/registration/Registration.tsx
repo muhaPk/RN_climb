@@ -1,8 +1,9 @@
 import React, {FC, useRef} from 'react';
-import { Text, View } from 'react-native'
 import { CustomInput } from 'shared/ui/input/input'
-import { CustomButton } from 'shared/ui/CustomButton/CustomButton'
+import { SubmitButton } from 'shared/ui/SubmitButton/SubmitButton'
 import { useForm } from "react-hook-form";
+import { H1, Underline } from 'shared/ui/CustomText/CustomText';
+import { Container } from 'shared/ui/Container/Container';
 
 export const Registration: FC = () => {
 
@@ -21,22 +22,21 @@ export const Registration: FC = () => {
 
     return (
 
-    <View className='w-full items-center'>
+    <Container>
 
 
-
-        <Text>Регистрация</Text>
+        <H1 className='mx-auto mt-6'>Регистрация</H1>
+        <Underline />
 
         <CustomInput control={control} errors={errors} title="Иднп" placeholder="Иднп" name="id_passport" />
         <CustomInput control={control} errors={errors} title="Телефон" placeholder="Телефон" name="phone" />
         <CustomInput control={control} errors={errors} title="Имя" placeholder="Имя" name="name" />
-        <CustomInput control={control} errors={errors} title="Фамилия" placeholder="Фамилия" name="surname" />
+        <CustomInput control={control} errors={errors} title="Фамилия" placeholder="Фамилия" name="surname" className='mb-4' />
 
-        <CustomButton title='Регистрация' onPress={handleSubmit(onSubmit)} />
+        <SubmitButton title='Регистрация' onPress={handleSubmit(onSubmit)} />
 
         
-
-    </View>
+    </Container>
 
 
     );

@@ -6,14 +6,13 @@ import {NavigationContainer} from '@react-navigation/native';
 
 import { createDrawerNavigator } from '@react-navigation/drawer';
 
-
-
-import { MainLayout } from './src/shared/ui/layout/mainLayout';
+import { MainLayout } from 'shared/ui/layout/mainLayout';
 
 import { Home } from 'pages/home/Home';
 import { Settings } from 'pages/settings/Settings';
 import { Registration } from 'pages/registration/Registration'
 import { Contacts } from 'pages/contacts/Contacts'
+import {CustomDrawerContent} from './src/features/navigation/CustomDrawerContent/CustomDrawerContent'
 
 // import { Registration } from './src/pages/auth/Registration';
 // import {Auth} from './src/pages/auth/Auth';
@@ -42,9 +41,11 @@ const Navigator = () => {
 
 
 
-        <Drawer.Navigator initialRouteName="Home" screenOptions={{headerShown: false}}>
-
-          {/* <Drawer.Screen name="Home" component={Home} /> */}
+        <Drawer.Navigator 
+          initialRouteName="Home" 
+          screenOptions={{headerShown: false}}
+          drawerContent={(props) => <CustomDrawerContent {...props} />}
+          >
 
           <Drawer.Screen name="Home">
             {() => (<MainLayout><Home /></MainLayout>)}

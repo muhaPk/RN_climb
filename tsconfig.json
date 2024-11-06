@@ -3,6 +3,6 @@
   
   "compilerOptions": {
     "types": ["nativewind/types"],
-    "baseUrl": "./src"
+    "baseUrl": "./src",
   }
 }

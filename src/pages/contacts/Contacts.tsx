@@ -1,9 +1,12 @@
 import React, {FC} from 'react';
-import { Text, View, Button, Linking } from 'react-native'
+import { View, Linking } from 'react-native'
 import { useForm } from "react-hook-form";
 import { CustomInput } from 'shared/ui/input/input'
 import email from 'react-native-email';
 import { EMAIL } from 'shared/config/consts';
+import { SubmitButton } from 'shared/ui/SubmitButton/SubmitButton';
+import { Container } from 'shared/ui/Container/Container';
+import { H1, H3, T, T2, Underline } from 'shared/ui/CustomText/CustomText';
 
 export const Contacts: FC = () => {
 
@@ -27,26 +30,30 @@ export const Contacts: FC = () => {
 
     return (
 
-        <View className='w-full px-2'>
+        <Container>
+
+            <H1 className='mx-auto mt-6'>Контакты</H1>
+            <Underline />
+
 
             <View className='items-center'>
-                <Text>O.C.N."ONLINE CREDIT" SRL</Text>
-                <Text>(+373) 60371300</Text>
-                <Text>online-credit.md@mail.ru</Text>
-                <Text>Мун. Кишинёв, бд. Мирча чел Бэтрын, 12/2, оф.301 (маг. Тирас) 4 этаж</Text>
-                <Text>Режим работы: Пн. - Пт. 9:00 - 18:00 Суб. - 9:00 - 17:00 Вс.- 10:00 - 17:00</Text>
+                <T>O.C.N."ONLINE CREDIT" SRL</T>
+                <T>(+373) 60371300</T>
+                <T>online-credit.md@mail.ru</T>
+                <T2 className='mt-4'>Мун. Кишинёв, бд. Мирча чел Бэтрын, 12/2, оф.301 (маг. Тирас) 4 этаж</T2>
+                <T2 className='mt-2'>Режим работы: Пн. - Пт. 9:00 - 18:00 Суб. - 9:00 - 17:00 Вс.- 10:00 - 17:00</T2>
             </View>
 
-            <Text className='mt-4 center'>Написать нам</Text>
+            <H3 className='mt-8 mb-4 mx-auto center'>Написать нам</H3>
 
 
                 <CustomInput control={control} errors={errors} placeholder="Имя" name="name" />
                 <CustomInput control={control} errors={errors} placeholder="Телефон" name="phone" />
-                <CustomInput control={control} errors={errors} type='textarea' placeholder="Сообщение" name="message" />
+                <CustomInput control={control} errors={errors} type='textarea' placeholder="Сообщение" name="message" className='mb-4' />
 
-                <Button title="Отирпвить" onPress={handleSubmit(onSubmit)} />
+                <SubmitButton title="Отирпвить" onPress={handleSubmit(onSubmit)} />
 
-        </View>
+        </Container>
 
 
     );
