@@ -2,8 +2,11 @@ import React, {FC} from 'react';
 import {View, Image} from 'react-native'
 import { CustomText, H1, H2, H3, T } from 'shared/ui/CustomText/CustomText';
 import Vector from 'shared/assets/vector.svg'
+import { Lang } from 'shared/lang';
 
   export const ImageWrapper: FC = () => {
+
+    const { home } = Lang()
 
     return (
 
@@ -19,7 +22,7 @@ import Vector from 'shared/assets/vector.svg'
             <View className='p-6 mb-4'>
                 <H3 className='text-white mb-4'>[Детальная информация по кредиту]</H3>
                 <H3 className='text-white mb-4'>[Преддоговоргая информация]</H3>
-                <T className='text-white'>Creditele pot fi achitate oricind integral! Dobânda se va aplica doar pentru perioada utilizata!</T>
+                <T className='text-white'>{home.kreditiMogut}</T>
             </View>
 
         </View>

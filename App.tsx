@@ -12,6 +12,7 @@ import { Home } from 'pages/home/Home';
 import { Settings } from 'pages/settings/Settings';
 import { Registration } from 'pages/registration/Registration'
 import { Contacts } from 'pages/contacts/Contacts'
+import { Login } from 'pages/login/Login';
 import {CustomDrawerContent} from './src/features/navigation/CustomDrawerContent/CustomDrawerContent'
 
 // import { Registration } from './src/pages/auth/Registration';
@@ -61,6 +62,10 @@ const Navigator = () => {
 
           <Drawer.Screen name="Contacts">
             {() => (<MainLayout><Contacts /></MainLayout>)}
+          </Drawer.Screen>
+
+          <Drawer.Screen name="Login">
+            {() => (<MainLayout><Login /></MainLayout>)}
           </Drawer.Screen>
 
         </Drawer.Navigator>

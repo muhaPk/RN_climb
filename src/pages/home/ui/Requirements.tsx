@@ -3,17 +3,19 @@ import {View} from 'react-native'
 import IconIonicons from 'react-native-vector-icons/Ionicons'
 import IconMaterial from 'react-native-vector-icons/MaterialCommunityIcons'
 import { CustomText, H1, H2, H3, T, Underline } from 'shared/ui/CustomText/CustomText';
-import Slider from "react-native-a11y-slider";
 import { Container } from 'shared/ui/Container/Container';
+import { Lang } from 'shared/lang';
 
   export const Requirements: FC = () => {
+
+    const { home } = Lang()
 
     return (
 
 
         <Container className='mt-8 pb-6 bg-[#29aae2]'>
 
-            <CustomText type='h1' className='text-center mt-8 text-white'>Требования к заёмщику:</CustomText>
+            <CustomText type='h1' className='text-center mt-8 text-white'>{home.trebovaniaKZaiomsiku}</CustomText>
             <Underline className='border-b-white' />
             
             <View className='flex flex-row'>
@@ -23,8 +25,8 @@ import { Container } from 'shared/ui/Container/Container';
                 </View>
 
                 <View>
-                  <CustomText type='h3' className='text-white'>Возраст</CustomText>
-                  <T className='text-[#eee] leading-5'>Возраст от 22 до 70 лет.</T>
+                  <CustomText type='h3' className='text-white'>{home.vozrast}</CustomText>
+                  <T className='text-[#eee] leading-5'>{home.vozrastOt}</T>
                 </View>
 
             </View>
@@ -36,8 +38,8 @@ import { Container } from 'shared/ui/Container/Container';
                 </View>
 
                 <View>
-                  <CustomText type='h3' className='text-white'>Гражданство Республики Молдова</CustomText>
-                  <T className='text-[#eee] pr-8 leading-5'>Кредиты предоставляются только гражданам Республики Молдова.</T>
+                  <CustomText type='h3' className='text-white'>{home.grajdanstvoRespubliki}</CustomText>
+                  <T className='text-[#eee] pr-8 leading-5'>{home.kreditiPredostavliaiutsia}</T>
                 </View>
 
             </View>
@@ -49,8 +51,8 @@ import { Container } from 'shared/ui/Container/Container';
                 </View>
 
                 <View>
-                  <CustomText type='h3' className='text-white'>Мобильный телефон</CustomText>
-                  <T className='text-[#eee] pr-8 leading-5'>Наличие мобильного телефона или смартфона.</T>
+                  <CustomText type='h3' className='text-white'>{home.mobilniiTelefon}</CustomText>
+                  <T className='text-[#eee] pr-8 leading-5'>{home.nalicieMobilinogo}</T>
                 </View>
 
             </View>

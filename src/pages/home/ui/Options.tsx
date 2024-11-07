@@ -4,9 +4,11 @@ import IconFontAwesome6 from 'react-native-vector-icons/FontAwesome6'
 import IconFontAntDesign from 'react-native-vector-icons/AntDesign'
 import IconEntypo from 'react-native-vector-icons/Entypo'
 import { CustomText, H1, H2, H3, T } from 'shared/ui/CustomText/CustomText';
-
+import { Lang } from 'shared/lang';
 
   export const Options: FC = () => {
+
+    const { home } = Lang()
 
     return (
 
@@ -22,8 +24,8 @@ import { CustomText, H1, H2, H3, T } from 'shared/ui/CustomText/CustomText';
                     />
                 </View>
 
-                <CustomText type='h3'>Получайте деньги мгновенно</CustomText>
-                <T>Заполните заявку и уже через 10 минут вы сможете получить деньги.</T>
+                <CustomText type='h3'>{home.poluciaiteDenigi}</CustomText>
+                <T>{home.zapolniteZaiavku}</T>
             </View>
 
             <View className='w-full flex flex-col mt-8 mb-4 mx-4'>
@@ -34,8 +36,8 @@ import { CustomText, H1, H2, H3, T } from 'shared/ui/CustomText/CustomText';
                         color="#fff"
                     />
                 </View>
-                <CustomText type='h3'>Как получить кредит?</CustomText>
-                <T>Заполните заявку и уже через 10 минут вы сможете получить деньги.</T>
+                <CustomText type='h3'>{home.nizkiiProcent}</CustomText>
+                <T>{home.procentnaiaStavka}</T>
             </View>
 
             <View className='w-full flex flex-col mt-8 mb-4 mx-4'>
@@ -46,8 +48,8 @@ import { CustomText, H1, H2, H3, T } from 'shared/ui/CustomText/CustomText';
                         color="#fff"
                     />
                 </View>
-                <CustomText type='h3'>Требования к заёмщику:</CustomText>
-                <T>Заполните заявку и уже через 10 минут вы сможете получить деньги.</T>
+                <CustomText type='h3'>{home.bezSkritihPlatejei}</CustomText>
+                <T>{home.vseUslovia}</T>
             </View>
 
         </View>

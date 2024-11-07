@@ -53,7 +53,7 @@ export const CustomInput: FC<FormData> = ({control, errors, placeholder, title, 
                                 // onFocus={}
                                 placeholderTextColor='#aaa'
                                 underlineColorAndroid='transparent'
-                                className='px-3 py-1 border-2 border-gray-200 rounded'
+                                className='px-3 py-1 border border-sky-500 bg-[#f1f5f9] rounded'
                                 {...rest}
                             />
 

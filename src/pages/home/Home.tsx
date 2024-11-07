@@ -16,17 +16,11 @@ export const Home: FC = () => {
     <View className=''>
 
         <Intro />
-    
-        <Calculate />
-
         <ImageWrapper />
-
+        <Calculate />
         <CrediteInformation />
-
         <Options />
-        
         <Steps />
-
         <Requirements />
         
     </View>

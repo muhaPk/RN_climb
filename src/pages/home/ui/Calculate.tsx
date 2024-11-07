@@ -3,6 +3,7 @@ import {View} from 'react-native'
 import { CustomText, H1, H2, H3, T, Underline } from 'shared/ui/CustomText/CustomText';
 import { Container } from 'shared/ui/Container/Container';
 import Slider from "react-native-a11y-slider";
+import { Lang } from 'shared/lang';
 
   export const Calculate: FC = () => {
 
@@ -12,12 +13,14 @@ import Slider from "react-native-a11y-slider";
     const handleSum = (value: number) => setSum([value])
     const handlePeriod = (value: number) => setPeriod([value])
 
+    const { home } = Lang()
+
     return (
 
 
-            <Container className='mb-8 px-4'>
+            <Container className='my-8 px-4'>
 
-                <CustomText type='h1' className='text-center'>Калькулятор кредита</CustomText>
+                <CustomText type='h1' className='text-center'>{home.kalkulatorKredita}</CustomText>
                 <Underline />
 
 
@@ -46,27 +49,27 @@ import Slider from "react-native-a11y-slider";
 
 
                 <View className='w-full mt-4 flex flex-row justify-between'>
-                    <T>Сумма возврата</T>
+                    <T>{home.summaVozvrata}</T>
                     <T>{sum} MDL</T>
                 </View>
 
                 <View className='w-full mt-2 flex flex-row justify-between'>
-                    <T>Сумма кредита</T>
+                    <T>{home.summaKredita}</T>
                     <T>{period} MDL</T>
                 </View>
 
                 <View className='w-full mt-2 flex flex-row justify-between'>
-                    <T>Комиссионные</T>
+                    <T>{home.komissionnie}</T>
                     <T>MDL</T>
                 </View>
 
                 <View className='w-full mt-2 flex flex-row justify-between'>
-                    <T>Процентная ставка (50% годовых)</T>
+                    <T>{home.procantnaiaStavka}</T>
                     <T>MDL</T>
                 </View>
 
                 <View className='w-full mt-2 flex flex-row justify-between'>
-                    <T>Ежемесячный платеж</T>
+                    <T>{home.ejemesiacniiPlatej}</T>
                     <T>MDL</T>
                 </View>
 

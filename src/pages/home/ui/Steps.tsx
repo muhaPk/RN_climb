@@ -4,17 +4,19 @@ import IconAnt from 'react-native-vector-icons/AntDesign'
 import IconMaterialCommunity from 'react-native-vector-icons/MaterialCommunityIcons'
 import IconMaterialIcons from 'react-native-vector-icons/MaterialIcons'
 import { CustomText, H1, H2, H3, T, Underline } from 'shared/ui/CustomText/CustomText';
-import {Ul, Li} from 'shared/ui/CustomTags/CustomTags'
 import { Container } from 'shared/ui/Container/Container';
+import { Lang } from 'shared/lang';
 
   export const Steps: FC = () => {
+
+    const { home } = Lang()
 
     return (
 
 
         <Container className='mt-2'>
 
-            <CustomText type='h1' className='text-center mt-10'>Как получить кредит?</CustomText>
+            <CustomText type='h1' className='text-center mt-10'>{home.kakPoluciti}</CustomText>
             <Underline />
 
 
@@ -24,8 +26,8 @@ import { Container } from 'shared/ui/Container/Container';
                 </View>
             
                 <View className='w-80 ml-4 pr-16'>
-                    <CustomText type='h3' className=''>Заполните заявку</CustomText>
-                    <T>Заявки на получение кредита можно подать через [мини-терминалы], [терминалы], [онлайн]</T>
+                    <CustomText type='h3' className=''>{home.zapolniteZaiavku}</CustomText>
+                    <T>{home.zaiavkiNaPolucenie}</T>
                 </View>
             </View>
 
@@ -37,8 +39,8 @@ import { Container } from 'shared/ui/Container/Container';
                 </View>
                 
                 <View className='w-80 ml-4 pr-16'>
-                    <CustomText type='h3' className=''>Дождитесь решения</CustomText>
-                    <T>Дождитесь решения по вашей заявке, это займет не более 10 минут.</T>
+                    <CustomText type='h3' className=''>{home.dojditesiResenia}</CustomText>
+                    <T>{home.dojditesiReseniaPo}</T>
                 </View>
             </View>
 
@@ -50,8 +52,8 @@ import { Container } from 'shared/ui/Container/Container';
                 </View>
                 
                 <View className='w-80 ml-4 pr-16'>
-                    <CustomText type='h3' className=''>Получите деньги</CustomText>
-                    <T>После подтверждения заявки получите ваши деньги у нас в офисе, на вашу банковскую карту или на электронный кошелёк RunPay.</T>
+                    <CustomText type='h3' className=''>{home.poluciaiteDenigi}</CustomText>
+                    <T>{home.poslePodtverjdenia}</T>
                 </View>
             </View>
 

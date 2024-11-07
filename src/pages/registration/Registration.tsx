@@ -4,8 +4,11 @@ import { SubmitButton } from 'shared/ui/SubmitButton/SubmitButton'
 import { useForm } from "react-hook-form";
 import { H1, Underline } from 'shared/ui/CustomText/CustomText';
 import { Container } from 'shared/ui/Container/Container';
+import { Lang } from 'shared/lang';
 
 export const Registration: FC = () => {
+
+    const { form, registration } = Lang()
 
     const { control, handleSubmit, formState: { errors } } = useForm({
         defaultValues: {
@@ -25,15 +28,15 @@ export const Registration: FC = () => {
     <Container>
 
 
-        <H1 className='mx-auto mt-6'>Регистрация</H1>
+        <H1 className='mx-auto mt-6'>{registration.registratia}</H1>
         <Underline />
 
-        <CustomInput control={control} errors={errors} title="Иднп" placeholder="Иднп" name="id_passport" />
-        <CustomInput control={control} errors={errors} title="Телефон" placeholder="Телефон" name="phone" />
-        <CustomInput control={control} errors={errors} title="Имя" placeholder="Имя" name="name" />
-        <CustomInput control={control} errors={errors} title="Фамилия" placeholder="Фамилия" name="surname" className='mb-4' />
+        <CustomInput control={control} errors={errors} placeholder={form.inputs.idnp} name="id_passport" />
+        <CustomInput control={control} errors={errors} placeholder={form.inputs.phone} name="phone" />
+        <CustomInput control={control} errors={errors} placeholder={form.inputs.name} name="name" />
+        <CustomInput control={control} errors={errors} placeholder={form.inputs.surname} name="surname" className='mb-4' />
 
-        <SubmitButton title='Регистрация' onPress={handleSubmit(onSubmit)} />
+        <SubmitButton title={form.buttons.registratsia} onPress={handleSubmit(onSubmit)} />
 
         
     </Container>

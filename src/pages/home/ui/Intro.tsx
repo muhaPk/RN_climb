@@ -6,29 +6,27 @@ import { Container } from 'shared/ui/Container/Container';
 import VectorInvers from 'shared/assets/vectorInvers.svg';
 import { Lang } from 'shared/lang';
 
-  export const Intro: FC = () => {
+export const Intro: FC = () => {
 
-    const { home, form } = Lang()
+  const { home, form } = Lang()
 
-    return (
+  return (
 
-      <>
+    <>
 
-        <Container className='bg-[#29aae2] py-4'>
+      <Container className='bg-[#29aae2] py-4'>
 
-          <CustomText type='h1' className='text-center text-2xl my-4 text-white'>{home.creditZa} <Text className='text-[#29aae2] bg-white'>{home.minut}</Text></CustomText>
-          <T className='text-center mb-4 text-white'>{home.zapolnite}</T>
-          <LinkButton page='Registration' title={form.buttons.zapolniti} style='light' />
+        <CustomText type='h1' className='text-center text-2xl my-4 text-white'>{home.creditZa} <Text className='text-[#29aae2] bg-white'>{home.minut}</Text></CustomText>
+        <T className='text-center mb-4 text-white'>{home.zapolnite}</T>
+        <LinkButton page='Registration' title={form.buttons.zapolniti} style='light' />
 
-        </Container>
+      </Container>
 
-      
-        <VectorInvers />
+    
+      <VectorInvers />
 
-      </>
+    </>
 
-    )
+  )
 
-  }
-
-  
+}
