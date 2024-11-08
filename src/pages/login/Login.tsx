@@ -1,6 +1,7 @@
 import React, {FC} from 'react';
 import { CustomInput } from 'shared/ui/input/input'
 import { SubmitButton } from 'shared/ui/SubmitButton/SubmitButton'
+import { LinkButton } from 'shared/ui/LinkButton/LinkButton';
 import { useForm } from "react-hook-form";
 import { H1, Underline } from 'shared/ui/CustomText/CustomText';
 import { Container } from 'shared/ui/Container/Container';
@@ -32,7 +33,8 @@ export const Login: FC = () => {
 
         <CustomInput control={control} errors={errors} placeholder={form.inputs.phone} name="phone" />
 
-        <SubmitButton title={form.buttons.voiti} onPress={handleSubmit(onSubmit)} />
+        <SubmitButton className='mt-4' title={form.buttons.voiti} onPress={handleSubmit(onSubmit)} />
+        <LinkButton className='mt-2' page='Registration' title={form.buttons.registratsia} styleColor='light' />
 
         
     </Container>

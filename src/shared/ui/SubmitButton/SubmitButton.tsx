@@ -2,15 +2,15 @@ import React from 'react';
 import {View, Text, Pressable} from 'react-native'
 
 type Props = {
-    style?: 'dark' | 'light'
-    title: string;
-    onPress: () => void;
-    className?: string;
+    colorStyle?: 'dark' | 'light'
+    title: string
+    onPress: () => void
+    className?: string
 }
 
 
 
-export const SubmitButton = ({title, onPress, style = 'dark', ...rest}: Props) => {
+export const SubmitButton = ({title, onPress, colorStyle = 'dark', ...rest}: Props) => {
 
     const baseViewStyle = 'w-min rounded px-6 py-2.5 items-center self-start mx-auto';
     const baseTextStyle = 'font-bold';
@@ -26,11 +26,11 @@ export const SubmitButton = ({title, onPress, style = 'dark', ...rest}: Props) =
     };
 
     return (
-        <View className={viewStyleVariants[style]} {...rest}>
+        <View className={viewStyleVariants[colorStyle]} {...rest}>
 
             <Pressable onPress={() => onPress}>
 
-                <Text className={textStyleVariants[style]}>{title}</Text>
+                <Text className={textStyleVariants[colorStyle]}>{title}</Text>
 
             </Pressable>
 

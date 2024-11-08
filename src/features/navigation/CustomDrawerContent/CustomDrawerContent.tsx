@@ -12,6 +12,13 @@ export const CustomDrawerContent: FC<DrawerContentComponentProps> = (props) => {
     return (
         <DrawerContentScrollView {...props}>
 
+            <View className='bg-[#29aae2] -mt-1'>
+                <View className='px-4 py-2 flex-row justify-between'>
+                    <T className='color-white'>Язык:</T>
+                    <T className='color-white'>ru / ro</T>
+                </View>
+            </View>
+
             <DrawerItem
                 label={menu.home}
                 onPress={() => props.navigation.navigate('Home')}
@@ -31,15 +38,6 @@ export const CustomDrawerContent: FC<DrawerContentComponentProps> = (props) => {
                 label={menu.login}
                 onPress={() => props.navigation.navigate('Login')}
             />
-
-
-            <View className='border-t border-gray-400'>
-                <View className='mt-4 mx-6 flex-row justify-between'>
-                    <T>Язык:</T>
-                    <T>ru / ro</T>
-                </View>
-
-            </View>
 
 
         </DrawerContentScrollView>
