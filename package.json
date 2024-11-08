@@ -10,12 +10,14 @@
     "test": "jest"
   },
   "dependencies": {
+    "@apollo/client": "^3.11.9",
     "@react-native-community/cli": "^15.0.1",
     "@react-native-community/cli-platform-apple": "^15.0.1",
     "@react-native-community/masked-view": "^0.1.11",
     "@react-navigation/drawer": "^6.7.2",
     "@react-navigation/native": "^6.1.18",
     "@reduxjs/toolkit": "^2.2.7",
+    "graphql": "^16.9.0",
     "nativewind": "^2.0.11",
     "postcss": "^8.4.47",
     "react": "18.3.1",
