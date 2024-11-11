@@ -1,20 +1,21 @@
 import React, {FC} from 'react';
 import {View, Text, TextInput} from 'react-native'
 import {Controller} from "react-hook-form";
+import { T2 } from 'shared/ui/CustomText/CustomText';
 
 
 type FormData = {
-    control: any;
-    errors: any;
-    name: string;
-    placeholder: string;
-    title?: string;
-    type?: string;
-    className?: string;
+    control: any
+    errors: any
+    name: string
+    placeholder: string
+    title?: string
+    type?: string
+    className?: string
+    rules?: any
 }
 
-export const CustomInput: FC<FormData> = ({control, errors, placeholder, title, name, type = 'input', ...rest}: FormData) => {
-
+export const CustomInput: FC<FormData> = ({control, errors, placeholder, title, name, rules, type = 'input', ...rest}: FormData) => {
 
     return (
 
@@ -22,9 +23,8 @@ export const CustomInput: FC<FormData> = ({control, errors, placeholder, title, 
             <Controller
                 name={name}
                 control={control}
-                rules={{
-                    required: true,
-                }}
+                rules={rules}
+
                 render={({ field: { onChange, onBlur, value } }) => (
 
                         <View className='mx-auto w-full max-w-max my-2'>
@@ -61,7 +61,7 @@ export const CustomInput: FC<FormData> = ({control, errors, placeholder, title, 
 
                     )}
             />
-            {errors[name] && <Text>This is required.</Text>}
+            {errors[name] && <T2 className='text-red-400'>{errors[name].message}</T2>}
         </>
     )
 }

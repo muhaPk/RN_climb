@@ -28,7 +28,7 @@ export const SubmitButton = ({title, onPress, colorStyle = 'dark', ...rest}: Pro
     return (
         <View className={viewStyleVariants[colorStyle]} {...rest}>
 
-            <Pressable onPress={() => onPress}>
+            <Pressable onPress={onPress}>
 
                 <Text className={textStyleVariants[colorStyle]}>{title}</Text>
 

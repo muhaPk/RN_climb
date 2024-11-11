@@ -37,8 +37,8 @@ export const Registration: FC = () => {
         <CustomInput control={control} errors={errors} placeholder={form.inputs.name} name="name" />
         <CustomInput control={control} errors={errors} placeholder={form.inputs.surname} name="surname" />
 
-        <SubmitButton className='mt-4' title={form.buttons.registratsia} onPress={handleSubmit(onSubmit)} />
-        <LinkButton className='mt-2' page='Login' title={form.buttons.voiti} styleColor='light' />
+        <SubmitButton className='mt-4' title={form.buttons.registration} onPress={handleSubmit(onSubmit)} />
+        <LinkButton className='mt-2' page='Login' title={form.buttons.login} styleColor='light' />
 
         
     </Container>
